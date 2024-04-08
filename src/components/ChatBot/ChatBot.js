@@ -19,6 +19,20 @@ const ChatBot = () => {
     const [isTyping, setIsTyping] = useState(false);
     const [isGlitching, setIsGlitching] = useState(false);
     const messagesEndRef = useRef(null);
+    
+    // Check if the user has already started the chat
+    useEffect(() => {
+        const previousMessages = localStorage.getItem('kijk-op-de-wijk');
+        if (previousMessages) {
+            const parsedPrevMessages = JSON.parse(previousMessages);
+            setMessages(parsedPrevMessages);
+            if (parsedPrevMessages[parsedPrevMessages.length - 1].answer) { 
+                setCurrentQuestion(parsedPrevMessages[parsedPrevMessages.length - 1]);
+            } else {
+                setCurrentQuestion(null);
+            }
+        }
+    }, []);
 
     // Checks if the last question was answered, if so start glitching the app
     useEffect(() => {
@@ -30,6 +44,7 @@ const ChatBot = () => {
         }
     }, [currentQuestion, setIsGlitching]);
 
+    // Stop glitching after 2 seconds
     useEffect(() => {
         if (isGlitching) {
             const undoGlitch = setTimeout(() => glitch.stopGlitch() && scrollToBottom(), 2000);
@@ -62,14 +77,16 @@ const ChatBot = () => {
                             isTyping={isTyping}
                             messagesEndRef={messagesEndRef}
                         />
-                        <ChatInput 
-                            messages={messages}
-                            setMessages={setMessages}
-                            initialQuestions={initialQuestions}
-                            currentQuestion={currentQuestion}
-                            setCurrentQuestion={setCurrentQuestion}
-                            setIsTyping={setIsTyping}
-                        />
+                        {currentQuestion && (
+                            <ChatInput 
+                                messages={messages}
+                                setMessages={setMessages}
+                                initialQuestions={initialQuestions}
+                                currentQuestion={currentQuestion}
+                                setCurrentQuestion={setCurrentQuestion}
+                                setIsTyping={setIsTyping}
+                            />
+                        )}
                     </div>
                 </div>
             ) : (
@@ -81,14 +98,16 @@ const ChatBot = () => {
                             isTyping={isTyping}
                             messagesEndRef={messagesEndRef}
                         />
-                        <ChatInput 
-                            messages={messages}
-                            setMessages={setMessages}
-                            initialQuestions={initialQuestions}
-                            currentQuestion={currentQuestion}
-                            setCurrentQuestion={setCurrentQuestion}
-                            setIsTyping={setIsTyping}
-                        />
+                        {currentQuestion && (
+                            <ChatInput 
+                                messages={messages}
+                                setMessages={setMessages}
+                                initialQuestions={initialQuestions}
+                                currentQuestion={currentQuestion}
+                                setCurrentQuestion={setCurrentQuestion}
+                                setIsTyping={setIsTyping}
+                            />
+                        )}
                     </div>
                 </div>
             )}

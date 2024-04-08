@@ -29,14 +29,19 @@ const ChatInput = ({
                 // Check if the answer is correct
                 if (inputValue !== currentQuestion.answer) {
                     setMessages([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer}]);
+                    localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer }])));
                 } else {
                     setMessages([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Goed gedaan! Hier is je volgende hint.." }, initialQuestions.find(message => message.id === currentQuestion.id + 1)]);
+                    localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Goed gedaan! Hier is je volgende hint.." }, initialQuestions.find(message => message.id === currentQuestion.id + 1)])));
                     // Up the current question by one
-                    if(initialQuestions.find(message => message.id === currentQuestion.id + 1)) {
+                    if (initialQuestions.find(message => message.id === currentQuestion.id + 1)) {
                         setCurrentQuestion(initialQuestions.find(message => message.id === currentQuestion.id + 1));
                     } else {
                         setCurrentQuestion(null);
-                        setMessages([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Je bent beter dan ik dacht.. Hier is het sleutelwoord: explorer. De zoektocht is voorbij. Meld je weer bij het lokaal waar je les hebt." }]);
+                        localStorage.setItem('kijk-op-de-wijk', JSON.stringify([{ id: updatedMessages.length + 1, sender: "bot", text: "Je bent beter dan ik dacht.. Hier is het sleutelwoord: explorer. De zoektocht is voorbij. Meld je weer bij het lokaal waar je les hebt.", image: "einde" }]));
+                        setTimeout(() => {
+                            setMessages([{ id: updatedMessages.length + 1, sender: "bot", text: "Je bent beter dan ik dacht.. Hier is het sleutelwoord: explorer. De zoektocht is voorbij. Meld je weer bij het lokaal waar je les hebt.", image: "einde" }]);
+                        }, 1000);
                     }
                 }
             }, randomTimeout);
