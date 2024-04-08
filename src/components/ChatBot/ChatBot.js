@@ -56,7 +56,7 @@ const ChatBot = () => {
 
     // Scroll to bottom everytime user enters a message
     useEffect(() => {
-        const bottomScroll = setTimeout(() => scrollToBottom(), 100);
+        const bottomScroll = setTimeout(() => scrollToBottom(), 500);
         return () => {
             clearTimeout(bottomScroll);
         }

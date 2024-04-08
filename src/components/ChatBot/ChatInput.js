@@ -12,10 +12,11 @@ const ChatInput = ({
     const inputRef = useRef(null);
 
     const handleAnswer = () => {
-        if (inputRef.current.value !== "" && currentQuestion) {
+        // Check if the input is correct - strip dots and comma's, make lowercase
+        const strippedInput = inputRef.current.value.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+        if (strippedInput !== "" && currentQuestion) {
             // Handle the user input
-            const inputValue = inputRef.current.value;
-            const updatedMessages = [...messages, { id: messages.length + 1, sender: "user", text: inputValue }];
+            const updatedMessages = [...messages, { id: messages.length + 1, sender: "user", text: strippedInput }];
             inputRef.current.value = "";
             setMessages(updatedMessages);
             // Bot answers.. pretends to type
@@ -27,7 +28,7 @@ const ChatInput = ({
             setTimeout(() => {
                 setIsTyping(false);
                 // Check if the answer is correct
-                if (inputValue !== currentQuestion.answer) {
+                if (strippedInput !== currentQuestion.answer) {
                     setMessages([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer}]);
                     localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer, currentQuestion: currentQuestion }])));
                 } else {
