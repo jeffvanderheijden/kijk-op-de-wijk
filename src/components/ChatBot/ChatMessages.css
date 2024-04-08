@@ -1,0 +1,131 @@
+.messageList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
+    overflow: scroll;
+}
+
+.botMessage,
+.userMessage {
+    align-self: flex-start;
+    position: relative;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
+    max-width: 70%;
+    float: left;
+}
+
+.botMessage {
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.botMessage img,
+.userMessage img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.botMessage:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0px 15px 12px 0;
+    border-color: transparent #f3f3f3 transparent transparent;
+    transform: rotate(0deg);
+}
+
+.botResponse {
+    display: flex;
+    margin: 10px;
+}
+
+.botAvatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--orange);
+}
+
+.userMessage {
+    align-self: flex-end;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: var(--yellow);
+}
+
+.userMessage:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0px 0 12px 15px;
+    border-color: transparent transparent transparent var(--yellow);
+    transform: rotate(0deg)
+}
+
+/* Stuff to move to different file ? */
+.jumping-dots {
+    align-self: flex-start;
+    margin-left: 20px;
+    padding-bottom: 40px;
+
+}
+.jumping-dots span {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    animation: jump 1s infinite;
+    display: inline-block;
+}
+
+.jumping-dots .dot {
+    background-color: var(--orange);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+.jumping-dots .dot-1 {
+    animation-delay: 200ms;
+}
+.jumping-dots .dot-2 {
+    margin-right: 3px;
+    animation-delay: 400ms;
+}
+.jumping-dots .dot-3 {
+    margin-right: 3px;
+    animation-delay: 600ms;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    20% {
+        bottom: 5px;
+    }
+
+    40% {
+        bottom: 0px;
+    }
+}

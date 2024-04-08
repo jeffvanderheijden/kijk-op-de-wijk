@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@property --dark-gray {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #37323E;
+}
+
+@property --medium-gray {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #6D6A75;
+}
+
+@property --light-gray {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #BFBDC1;
+}
+
+@property --orange {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #DE9E36;
+}
+
+@property --yellow {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #DEB841;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-style: normal;
+    background-color: var(--dark-gray);
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+}
+
+#chatBot {
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--dark-gray);
+}
+
+.botAvatar img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Some hacks to fix the Glitch animation */
+html, body, #___gatsby, #___gatsby > div, main, main > div, main > div > div {
+    height: 100%;
+}

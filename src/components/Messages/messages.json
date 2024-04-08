@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "text": "Als developer (of hacker) zit je vaak binnen achter een computer. Ik vind het tijd om jullie eens een frisse neus te laten halen. Beantwoord alle vragen en ik geef jullie een hint over mijn identiteit.",
+        "sender": "bot"
+    },
+    {
+        "id": 2,
+        "text": "Vraag 1. Wat staat er boven dit beeld dat je kunt vinden voor het stadhuis?",
+        "sender": "bot",
+        "answer": "sera parsimonia in fundo",
+        "image": "clue1"
+    },
+    {
+        "id": 3,
+        "text": "Vraag 2. Op de Westersingel staat dit kunstwerk. Vul de missende zin in..",
+        "sender": "bot",
+        "answer": "fail again fail better",
+        "image": "clue2"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "question": "Vraag 1",
+        "answer": "Antwoord 1",
+        "hint": "",
+        "preHint": "tekst met afbeelding?"
+    },
+    {
+        "id": 2,
+        "question": "Vraag 2",
+        "answer": "Antwoord 2",
+        "hint": "",
+        "preHint": "tekst"
+    },
+    {
+        "id": 3,
+        "question": "Vraag 3",
+        "answer": "Antwoord 3",
+        "hint": "",
+        "preHint": "tekst met afbeelding of locatie?"
+    }
+]
