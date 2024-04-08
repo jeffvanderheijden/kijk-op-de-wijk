@@ -26,8 +26,8 @@ const ChatBot = () => {
         if (previousMessages) {
             const parsedPrevMessages = JSON.parse(previousMessages);
             setMessages(parsedPrevMessages);
-            if (parsedPrevMessages[parsedPrevMessages.length - 1].answer) { 
-                setCurrentQuestion(parsedPrevMessages[parsedPrevMessages.length - 1]);
+            if (parsedPrevMessages[parsedPrevMessages.length - 1].currentQuestion) {
+                setCurrentQuestion(parsedPrevMessages[parsedPrevMessages.length - 1].currentQuestion);
             } else {
                 setCurrentQuestion(null);
             }

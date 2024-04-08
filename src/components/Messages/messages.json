@@ -9,13 +9,15 @@
         "text": "Vraag 1. Wat staat er boven dit beeld dat je kunt vinden voor het stadhuis?",
         "sender": "bot",
         "answer": "sera parsimonia in fundo",
-        "image": "clue1"
+        "image": "clue1",
+        "currentQuestion": { "id": 2, "text": "Vraag 1. Wat staat er boven dit beeld dat je kunt vinden voor het stadhuis?", "sender": "bot", "answer": "sera parsimonia in fundo", "image": "clue1" }
     },
     {
         "id": 3,
         "text": "Vraag 2. Op de Westersingel staat dit kunstwerk. Vul de missende zin in..",
         "sender": "bot",
         "answer": "fail again fail better",
-        "image": "clue2"
+        "image": "clue2",
+        "currentQuestion": {  "id": 3, "text": "Vraag 2. Op de Westersingel staat dit kunstwerk. Vul de missende zin in..", "sender": "bot", "answer": "fail again fail better", "image": "clue2" }
     }
 ]

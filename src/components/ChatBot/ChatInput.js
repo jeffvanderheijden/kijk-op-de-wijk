@@ -29,10 +29,10 @@ const ChatInput = ({
                 // Check if the answer is correct
                 if (inputValue !== currentQuestion.answer) {
                     setMessages([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer}]);
-                    localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer }])));
+                    localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Sorry, dat is niet het juiste antwoord.", answer: currentQuestion.answer, currentQuestion: currentQuestion }])));
                 } else {
                     setMessages([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Goed gedaan! Hier is je volgende hint.." }, initialQuestions.find(message => message.id === currentQuestion.id + 1)]);
-                    localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Goed gedaan! Hier is je volgende hint.." }, initialQuestions.find(message => message.id === currentQuestion.id + 1)])));
+                    localStorage.setItem('kijk-op-de-wijk', JSON.stringify(([...updatedMessages, { id: updatedMessages.length + 1, sender: "bot", text: "Goed gedaan! Hier is je volgende hint..", currentQuestion: currentQuestion }, initialQuestions.find(message => message.id === currentQuestion.id + 1)])));
                     // Up the current question by one
                     if (initialQuestions.find(message => message.id === currentQuestion.id + 1)) {
                         setCurrentQuestion(initialQuestions.find(message => message.id === currentQuestion.id + 1));
