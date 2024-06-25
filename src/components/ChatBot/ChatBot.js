@@ -69,7 +69,7 @@ const ChatBot = () => {
     return (
         <>
             {!isGlitching ? (
-                <div>
+                <div id="chatBot">
                     <div>
                         <ChatMessages 
                             messages={messages}

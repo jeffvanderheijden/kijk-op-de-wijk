@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkkijk_op_de_wijk=self.webpackChunkkijk_op_de_wijk||[]).push([[883],{429:function(e,n,t){t.r(n),t.d(n,{Head:function(){return u}});var l=t(294);n.default=()=>l.createElement("main",null,l.createElement("h1",null,"Page not found"));const u=()=>l.createElement("title",null,"Not found")}}]);
+//# sourceMappingURL=component---src-pages-404-js-f6d2618c42daab70a259.js.map
