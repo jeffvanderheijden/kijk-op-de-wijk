@@ -6,6 +6,9 @@ const IndexPage = () => {
   return (
     <main>
       <ChatBot />
+      <div id="mobile-warning">
+        Please view on a mobile device
+      </div>
     </main>
   )
 }

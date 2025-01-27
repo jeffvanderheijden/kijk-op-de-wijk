@@ -46,3 +46,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+
+// Show a warning that this should be viewed on mobile
+#chatBot {
+	display: none;
+}
+#mobile-warning {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@media screen and (max-width: 992px) {
+	#mobile-warning {
+		display: none;
+	}
+	#chatBot {
+		display: block;
+	}
+}
