@@ -1,28 +1,19 @@
 {
-  "name": "kijk-op-de-wijk",
+  "name": "kijk-op-de-wijk-web-styled",
   "version": "1.0.0",
   "private": true,
-  "description": "kijk-op-de-wijk",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "gatsby": "^5.13.3",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-sass": "^6.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-powerglitch": "^1.0.3",
-    "sass": "^1.72.0"
+    "react-router-dom": "^6.14.1"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9",
+    "@vitejs/plugin-react": "^4.0.3"
   }
 }

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": "Kubuswoningen",
+    "hint": "Een kubus waar je in kunt wonen.",
+    "lat": 51.9293,
+    "lng": 4.5902,
+    "question": {
+      "type": "multiple",
+      "text": "Welke architect ontwierp de Kubuswoningen?",
+      "options": ["Rem Koolhaas","Piet Blom","Ben van Berkel"],
+      "answer": "Piet Blom"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Markthal",
+    "hint": "Een plek waar alles in blokletters 'MARKT' schreeuwt.",
+    "lat": 51.9293,
+    "lng": 4.5902,
+    "question": {
+      "type": "multiple",
+      "text": "Wat is het thema van het kunstwerk aan het plafond van de Markthal?",
+      "options": ["Fruit en groente", "Dieren", "Stadsgezichten"],
+      "answer": "Fruit en groente"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Witte de Withstraat",
+    "hint": "Kunst, cafés en street-art; zoek de straat met veel galerieën.",
+    "lat": 51.9293,
+    "lng": 4.5902,
+    "question": {
+      "type": "text",
+      "text": "Hoe heet het standbeeld / kunstwerk naast café X? (typ antwoord)",
+      "answer": "De Voorstelling"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Oude Haven",
+    "hint": "Schepen en bruggen — een oude havenplek.",
+    "lat": 51.9293,
+    "lng": 4.5902,
+    "question": {
+      "type": "multiple",
+      "text": "Welk jaartal staat op de herdenkingssteen?",
+      "options": ["1880","1920","1950"],
+      "answer": "1920"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Willemsbrug",
+    "hint": "Een brug met een open karakter: soms rood, soms wit?",
+    "lat": 51.9293,
+    "lng": 4.5902,
+    "question": {
+      "type": "multiple",
+      "text": "Hoeveel bogen heeft de Willemsbrug?",
+      "options": ["1","3","5"],
+      "answer": "1"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Eindpunt - Interpol Kluis",
+    "hint": "Goed gedaan. Ga nu terug naar het Grafisch Lyceum.",
+    "lat": 51.9293,
+    "lng": 4.5902,
+    "question": {
+      "type": "end",
+      "text": "Je hebt alle vragen beantwoord! Laat dit bericht aan je docent zien."
+    }
+  }
+]
